@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js">
+</script>
+<link rel="stylesheet" type="text/css" href="snow.css">
+<nav>
+
+
+
+<body ng-app="myApp">
+
+<p><a href="#/!">home</a>
+
+
+<a href="#!courses">about</a>
+
+<a href="#!skills">skills</a>
+
+<a href="#!education">education</a>
+
+<a href="#!xp">experiences</a>
+
+<a href="#!internships">servecies</a>
+
+<a href="#!contact">contact</a>
+<div ng-view></div>
+
+<script>
+const app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        template : `<h1>Welcome to my Angular Js App</h1>
+                       <p>
+                       Click on the links to change this content
+                       </p>`
+    })
+    .when("/courses", {
+        template : `<h1>Courses Offered</h1>
+                       <p>
+                         <ul>
+                           <li> JAVA PROGRAMMING </li>
+                         <li> C# PROGRAMMING </li>
+                         <li> PYTHON PROGRAMMING </li>
+                         <li> PHP PROGRAMMING </li>
+                         <li> ARTIFICIAL INTELLIGENCE </li>
+                         </ul>
+                       </p>`
+    })
+    .when("/skills", {
+        template : `<h1>skills masterd</h1>
+                       <p>
+                         <ul>
+                           <li> bokoharam </li>
+                         <li> C# PROGRAMMING </li>
+                         <li> PYTHON PROGRAMMING </li>
+                         <li> PHP PROGRAMMING </li>
+                         <li> ARTIFICIAL INTELLIGENCE </li>
+                         </ul>
+                       </p>`
+    })
+    .when("/education", {
+        template : `<h1>education</h1>
+                       <p>
+                         <ul>
+                           <li> JAVA PROGRAMMING </li>
+                         <li> C# PROGRAMMING </li>
+                         <li> PYTHON PROGRAMMING </li>
+                         <li> PHP PROGRAMMING </li>
+                         <li> ARTIFICIAL INTELLIGENCE </li>
+                         </ul>
+                       </p>`
+    })
+    .when("/contact", {
+        template : `<h1>contact</h1>
+                       <p>
+                         <ul>
+                           <li> JAVA PROGRAMMING </li>
+                         <li> C# PROGRAMMING </li>
+                         <li> PYTHON PROGRAMMING </li>
+                         <li> PHP PROGRAMMING </li>
+                         <li> ARTIFICIAL INTELLIGENCE </li>
+                         </ul>
+                       </p>`
+    })
+    .when("/xp", {
+        template : `<h1>experiences</h1>
+                       <p>
+                         <ul>
+                           <li> JAVA PROGRAMMING </li>
+                         <li> C# PROGRAMMING </li>
+                         <li> PYTHON PROGRAMMING </li>
+                         <li> PHP PROGRAMMING </li>
+                         <li> ARTIFICIAL INTELLIGENCE </li>
+                         </ul>
+                       </p>`
+    })
+
+    .when("/internships", {
+        template : `<h1>Hire With Us</h1>
+                       <p>
+                         <ul>
+                           <li>Software Developer</li>
+                           <li>Technical Content Writer</li>
+                           <li>Technical Content Engineer</li>
+                         </ul>
+                       </p>`
+    });
+});
+</script>
+
+</body>
+</nav>
+</html>
